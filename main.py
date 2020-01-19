@@ -1,13 +1,10 @@
-# Youtube MP3 Downloader v0.1
+# Youtube MP3 Downloader v0.2
 
 import os
 import os.path
 import tkinter as tk
 import urllib.request
 from bs4 import BeautifulSoup
-
-
-final_url = 0
 
 
 def search_to_url():
@@ -28,10 +25,7 @@ def search_to_url():
             )
 
 
-inputValue = 0
-
 root = tk.Tk()
-#root.geometry("700x100")
 root.title("Youtube Downloader")
 
 
