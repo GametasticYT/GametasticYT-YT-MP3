@@ -29,7 +29,7 @@ def search_to_url():
 inputValue = 0
 
 root = tk.Tk()
-root.geometry("700x100")
+#root.geometry("700x100")
 root.title("Youtube Downloader")
 
 
@@ -39,12 +39,14 @@ def get_input():
     search_to_url()
 
 
+
 textBox = tk.Text(root, height=1, width=50)
-textBox.pack()
+textBox.grid(row=3, column=1)
 
 
 buttonCommit = tk.Button(
     root, height=1, width=10, text="Download", command=lambda: get_input()
 )
-buttonCommit.pack()
+buttonCommit.grid(row=4, column=1)
+root.grid_rowconfigure(4, minsize=100)
 tk.mainloop()
