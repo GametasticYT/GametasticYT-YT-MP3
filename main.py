@@ -1,5 +1,4 @@
 # Youtube MP3 Downloader v0.2
-
 import os
 import os.path
 import tkinter as tk
@@ -33,7 +32,6 @@ def get_input():
     global inputValue
     inputValue = textBox.get("1.0", "end-1c")
     search_to_url()
-
 
 
 textBox = tk.Text(root, height=1, width=50)
