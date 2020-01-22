@@ -4,7 +4,7 @@ import os.path
 import tkinter as tk
 import urllib.request
 from bs4 import BeautifulSoup
-
+import PySimpleGUI as sg
 
 def search_to_url():
     query = urllib.parse.quote(inputValue)
