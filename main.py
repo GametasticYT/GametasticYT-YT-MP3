@@ -38,24 +38,3 @@ while True:
         break
     search_to_url(inputValue[0])
 
-
-#root = tk.Tk()
-#root.title("Youtube Downloader")
-
-
-#def get_input():
-#    global inputValue
-#    inputValue = textBox.get("1.0", "end-1c")
-#    search_to_url()
-
-
-#textBox = tk.Text(root, height=1, width=50)
-#textBox.grid(row=3, column=1)
-
-
-#buttonCommit = tk.Button(
-#    root, height=1, width=10, text="Download", command=lambda: get_input()
-#)
-#buttonCommit.grid(row=4, column=1)
-#root.grid_rowconfigure(4, minsize=100)
-#tk.mainloop()
