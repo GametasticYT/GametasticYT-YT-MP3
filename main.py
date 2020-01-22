@@ -6,8 +6,8 @@ import urllib.request
 from bs4 import BeautifulSoup
 import PySimpleGUI as sg
 
-def search_to_url():
-    query = urllib.parse.quote(inputValue)
+def search_to_url(search):
+    query = urllib.parse.quote(search)
     url = "https://www.youtube.com/results?search_query=" + query
     response = urllib.request.urlopen(url)
     html = response.read()
@@ -23,24 +23,39 @@ def search_to_url():
                 + final_url
             )
 
+sg.theme('DarkAmber')
 
-root = tk.Tk()
-root.title("Youtube Downloader")
+layout = [
+    [sg.InputText()],
+    [sg.Button('Download'), sg.Button('Exit')],    
+]
+
+window = sg.Window('Youtube MP3 Downloader', layout)
+
+while True:
+    event, inputValue = window.read()
+    if event in(None, 'Exit'):
+        break
+    search_to_url(inputValue[0])
 
 
-def get_input():
-    global inputValue
-    inputValue = textBox.get("1.0", "end-1c")
-    search_to_url()
+#root = tk.Tk()
+#root.title("Youtube Downloader")
 
 
-textBox = tk.Text(root, height=1, width=50)
-textBox.grid(row=3, column=1)
+#def get_input():
+#    global inputValue
+#    inputValue = textBox.get("1.0", "end-1c")
+#    search_to_url()
 
 
-buttonCommit = tk.Button(
-    root, height=1, width=10, text="Download", command=lambda: get_input()
-)
-buttonCommit.grid(row=4, column=1)
-root.grid_rowconfigure(4, minsize=100)
-tk.mainloop()
+#textBox = tk.Text(root, height=1, width=50)
+#textBox.grid(row=3, column=1)
+
+
+#buttonCommit = tk.Button(
+#    root, height=1, width=10, text="Download", command=lambda: get_input()
+#)
+#buttonCommit.grid(row=4, column=1)
+#root.grid_rowconfigure(4, minsize=100)
+#tk.mainloop()
