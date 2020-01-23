@@ -1,4 +1,4 @@
-# Youtube MP3 Downloader v0.2
+# Youtube MP3 Downloader v0.3
 import os
 import os.path
 import tkinter as tk
