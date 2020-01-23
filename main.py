@@ -23,7 +23,7 @@ def search_to_url(search):
                 + final_url
             )
 
-sg.theme('DarkAmber')
+sg.theme('SystemDefaultForReal')
 
 layout = [
     [sg.InputText()],
