@@ -27,10 +27,10 @@ sg.theme('SystemDefaultForReal')
 
 layout = [
     [sg.InputText()],
-    [sg.Button('Download'), sg.Button('Exit')],    
+    [sg.Button('Download', bind_return_key=True), sg.Button('Exit')],    
 ]
 
-window = sg.Window('Youtube MP3 Downloader', layout)
+window = sg.Window('Youtube MP3 Downloader', layout, element_justification="center")
 
 while True:
     event, inputValue = window.read()
