@@ -19,7 +19,7 @@ def search_to_url(search):
             global final_url
             final_url = str("https://www.youtube.com" + vid["href"])
             os.system(
-                "youtube-dl -o output/%(title)s-%(id)s.%(ext)s --no-playlist --playlist-items 1 -x --audio-format mp3 "
+                "youtube-dl -o 'output/%(title)s-%(id)s.%(ext)s' --no-playlist --playlist-items 1 -x --audio-format mp3 "
                 + final_url
             )
 
