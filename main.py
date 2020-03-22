@@ -1,7 +1,6 @@
 # Youtube MP3 Downloader v0.3
 import os
 import os.path
-import tkinter as tk
 import urllib.request
 from bs4 import BeautifulSoup
 import PySimpleGUI as sg
